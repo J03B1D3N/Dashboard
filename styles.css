@@ -19,12 +19,19 @@ header {
 nav {
     background-color: lightsalmon;
     grid-column: 1 / 2;
-    grid-row: 2 / 7;
+    grid-row: 2 / 8;
 }
 main {
     background-color: lightgray;
     grid-column: 2 / 6;
-    grid-row: 2 / 7;
+    grid-row: 2 / 8;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    align-items: center;
+    overflow: auto;
 }
 footer {
     background-color: lightgreen;
@@ -34,3 +41,14 @@ footer {
 .section {
     border-radius: 15px;
 }
+.card {
+background-color: white;
+height: 200px;
+border-radius: 10px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+

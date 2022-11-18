@@ -52,6 +52,10 @@ form {
     align-items: center;
     margin-left: 15px;
 }
+#searchBtn {
+    position: relative;
+    right: 45px;
+}
 #searchBtn:hover {
     outline: 2px solid black;
 }
@@ -99,7 +103,7 @@ p {
 .buttons {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 12px;
     margin-right: 20px;
 }
 button{
@@ -172,6 +176,80 @@ sidebar {
 .dashboard>div>div>div>a:active {
     color: rgb(158, 157, 157);
 }
+nav {
+    grid-column: 7 / 9;
+    grid-row: 2 / -1;
+    background-color: lightgrey;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: 70px 1fr 70px 1fr;
+}
+.announceTitle {
+    grid-row: 1 / 2;
+    font-weight: 600;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 30px;
+}
+.trendingTitle {
+    font-weight: 600;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    padding-left: 30px;
+    padding-top: 9px;
+}
+.announceBoard, .trendingBoard {
+    height: 80%;
+    width: 80%;
+    background-color: white;
+    align-self: start;
+    justify-self: start;
+    margin-left: 30px;
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.msg11, .msg22, .msg33 {
+    height: 3rem;
+    width: 21rem;
+    background-color: white;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 0.8rem;
+    color: rgb(71, 70, 70);
+    box-sizing: border-box;
+    padding-top: 10px;
+    border-bottom: 2px solid grey;
+}
+.msg33 {
+    border-bottom: none;
+}
+.announceBoard>div>div>a {
+    text-decoration: none;
+    color: black;
+}
+.announceBoard>div>div>a:hover {
+    color: rgb(121, 117, 117);
+}
+.avatar3 {
+    height: 64px;
+}
+.trendingUsers>a {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+.trendingUsers>a:hover {
+    color: gray;
+}
 main {
     background-color: lightgray;
     grid-column: 2 / 7;
@@ -179,7 +257,6 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: 70px repeat(auto-fit, minmax(300px, 1fr));
-
     align-items: top;
     justify-items: center;
 }
@@ -201,14 +278,11 @@ main {
     align-items: center;
     height: 100%;
     width: 100%;
-    padding-left: 70px;
+    padding-left: 30px;
     font-weight: 600;
+    box-sizing: border-box;
 }
-nav {
-    grid-column: 7 / 9;
-    grid-row: 2 / -1;
-    background-color: aquamarine;
-}
+
 .cardTitle {
     font-size: larger;
     font-weight: 600;
